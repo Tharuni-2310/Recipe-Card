@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Recipe Card </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container"> 
+  <h1 id="printArea">
+    Banana Chocolate Milkshake
+  </h1>
+  <img src="image.webp" class="image" id="printArea">
+  <h2>Preparation Time:10mins</h2>
+  <h2>Serving:10 glasses</h2>
+  <div class="Ingredients" id="printArea">
+  <button  onclick="toggleDetails(this)">Show Ingredients Required</button>
+  <ul id="printArea">
+    <li>5 ripe bananas</li>
+    <li>5 cups chilled milk</li>
+    <li>5 tbsp cocoa powder (or use chocolate syrup)</li>
+    <li>5 tbsp sugar or honey (adjust to taste)</li>
+    <li>10 ice cubes</li>
+    <li> Ice cream, grated chocolate</li>
+  </ul>
+  </div>
+  <div class="Steps" id="printArea">
+  <button onclick="togglesteps(this)">Show Steps</button>
+  <ol id="stepList">
+    <li class="highlight">Peel and slice bananas.</li>
+    <li class="highlight"> Add bananas, cocoa powder, sugar, and milk to a blender.</li>
+    <li class="highlight">Blend until smooth and creamy.</li>
+    <li class="highlight">Add ice cubes and blend again.</li>
+    <li class="highlight">Pour into 10 glasses.</li>
+    <li class="highlight">Top with grated chocolate or a scoop of ice cream.</li>
+  </ol>
+  </div>
+  <div class="progress-bar">
+  <div id="bar"></div>
+  </div>
+  <button onclick="start()">Start Cooking</button>
+  <button onclick="next()">Next</button>
+  <button onclick="window.print()">Print Recipe</button>
+  </div>
+   <script src="script.js"></script>
+</body>
+</html>
