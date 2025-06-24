@@ -11,7 +11,7 @@
   <h1 id="printArea">
     Banana Chocolate Milkshake
   </h1>
-  <img src="image.webp" class="image" id="printArea">
+  <img src="image.webp" class="image">
   <h2>Preparation Time:10mins</h2>
   <h2>Serving:10 glasses</h2>
   <div class="Ingredients" id="printArea">
@@ -28,12 +28,12 @@
   <div class="Steps" id="printArea">
   <button onclick="togglesteps(this)">Show Steps</button>
   <ol id="stepList">
-    <li class="highlight">Peel and slice bananas.</li>
-    <li class="highlight"> Add bananas, cocoa powder, sugar, and milk to a blender.</li>
-    <li class="highlight">Blend until smooth and creamy.</li>
-    <li class="highlight">Add ice cubes and blend again.</li>
-    <li class="highlight">Pour into 10 glasses.</li>
-    <li class="highlight">Top with grated chocolate or a scoop of ice cream.</li>
+    <li>Peel and slice bananas.</li>
+    <li> Add bananas, cocoa powder, sugar, and milk to a blender.</li>
+    <li>Blend until smooth and creamy.</li>
+    <li>Add ice cubes and blend again.</li>
+    <li>Pour into 10 glasses.</li>
+    <li>Top with grated chocolate or a scoop of ice cream.</li>
   </ol>
   </div>
   <div class="progress-bar">
@@ -42,6 +42,7 @@
   <button onclick="start()">Start Cooking</button>
   <button onclick="next()">Next</button>
   <button onclick="window.print()">Print Recipe</button>
+  <div id="timer"></div>
   </div>
    <script src="script.js"></script>
 </body>

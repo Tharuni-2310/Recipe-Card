@@ -35,6 +35,29 @@ function start(){
     document.getElementById("bar").style.width = progress + "%";
     updateSteps();
   }
+  const timer = document.getElementById("timer");
+
+    let countdown; 
+
+      let totalTime = 10 * 60; // Set to 10 minutes in seconds
+
+      countdown = setInterval(() => {
+        const minutes = Math.floor(totalTime / 60);
+        const seconds = totalTime % 60;
+
+        timer.textContent = `Time left: ${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+        totalTime--;
+
+        if (totalTime < 0) {
+          clearInterval(countdown);
+          timer.textContent = "🍽️Time's up! Hope your recipe is ready 😋";
+        }
+        if (currentStep==totalSteps) {
+          clearInterval(countdown);
+          timer.textContent = "Reached the end! Hope your recipe is ready 😋";
+        }
+      }, 1000);
 }
 function next() {
   if (currentStep < totalSteps && currentStep>0) {
@@ -57,4 +80,6 @@ const steps = document.querySelectorAll("#stepList li");
         step.classList.add("active");
       }
     });
-  }
+}
+
+
